@@ -1,46 +1,244 @@
-\title{A Very Simple \LaTeXe{} Template}
-\author{
-        Vitaly Surazhsky \\
-                Department of Computer Science\\
-        Technion---Israel Institute of Technology\\
-        Technion City, Haifa 32000, \underline{Israel}
-            \and
-        Yossi Gil\\
-        Department of Computer Science\\
-        Technion---Israel Institute of Technology\\
-        Technion City, Haifa 32000, \underline{Israel}
-}
-\date{\today}
+\documentclass[twocolumn, 8pt]{extarticle}
 
-\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+\newcommand{\img}[1]{%
+    \raisebox{-.3\baselineskip}{%
+        \includegraphics[
+        height=\baselineskip,
+        width=\baselineskip,
+        keepaspectratio,
+        ]{#1}%
+    }%
+}
+
+\titleformat{\section}
+{\huge \bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\large \bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}
+{}
+{0em}
+{}
 
 \begin{document}
+
+\title{Curriculum Vitae}
+\author{Walter Smuts}
 \maketitle
 
-\begin{abstract}
-This is the paper's abstract \ldots
-\end{abstract}
+\section{Education}
 
-\section{Introduction}
-This is time for all good men to come to the aid of their party!
+\subsection{University of Cape Town}
+\img{UCT.jpg}
+I’m studying Electrical and Computer engineering (BSc Eng)
+currently in my 4th year. I’m on the standard 4 year
+program and have not failed a single subject, achieving a
+GPA of 65\%.
 
-\paragraph{Outline}
-The remainder of this article is organized as follows.
-Section~\ref{previous work} gives account of previous work.
-Our new and exciting results are described in Section~\ref{results}.
-Finally, Section~\ref{conclusions} gives the conclusions.
+My favorite courses thus far has been signals and systems,
+control theory and computer science. I thoroughly enjoyed
+the mathematical foundations and essence of theses subjects.
 
-\section{Previous work}\label{previous work}
-A much longer \LaTeXe{} example was written by Gil~\cite{Gil:02}.
+I am part of the Mathematical society (MamSoc) and was
+involved in the Algorithm circle (Computer Science Club)
+during my first year. Throughout my studies I often play
+squash, hike and go swimming.
 
-\section{Results}\label{results}
-In this section we describe the results.
+\subsection{Pretoria Boys High School}
+\img{PBHS.jpg}
+My elective choices for my high school career was Music,
+information Technology, Physical Sciences and Advanced
+Programme Mathematics. I achieved 3 distinctions for my
+NSC certificate with an average of 78\% and 67\% for
+Advanced programme mathematics (an IEB subject).
 
-\section{Conclusions}\label{conclusions}
-We worked hard, and achieved very little.
+Most of my involvement in high school was related to the
+music department. I played first trumpet for the orchestra,
+wind band, Dixie band and brass choir. I thoroughly enjoyed
+public performances and the constant exposure to music.
 
-\bibliographystyle{abbrv}
-\bibliography{main}
+I played squash throughout my high school career and
+cricket during the first two years. I was one of the lucky few
+who got accepted for bush school, spending a term in the
+Magaliesberg north of Pretoria. The experience gave me an
+intense love of nature. I was part of the hiking club during
+my 4th and 5th years and went on numerous hikes with and
+without the hiking club.
+
+\section{Special Interests}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{l l}
+	Mathematics & Theoretical Computer Science \\
+	Cryptography & Theoretical Physics \\
+	Rocketry & Travel \\
+	Squash & Audio \\
+\end{tabular}
+\end{center}
+
+\newpage
+\section{Projects}
+
+\subsection{TuneMe - University Project}
+
+For our third year embedded systems course we were
+tasked with doing a music-based embedded project in
+groups of 4. I was the group leader and presented the idea
+for making a real-time autotuning DSP project for karaoke.
+
+We managed to get real time pitch shifting working but ran
+out of time and could not create a fully auto tuning system.
+The overall project was a success and we achieved 73\%.
+
+\subsection{Mandelbrot Zoom - Personal Project}
+
+A java program (with some bash scripts) that draws the
+Mandelbrot set at incremental crop levels, producing a set
+of images. These images are stitched together to produce a
+zooming video.
+
+\subsection{LMMS - Open Source Project}
+
+LMMS is an open source digital audio workspace developed
+on GitHub by many open source Linux developers. The goal
+is to be a Linux alternative for software like fl-studios.
+
+I submitted three issues and two pull requests to solve two
+of these issues. Both pull requests were accepted into the
+main branch and the other issue was quickly resolved by
+another developer. I still plan on contributing more to the
+project in the future.
+
+\subsection{Digital Speedometer - Personal Project}
+
+My motorbike, a KLR-650, does not have a fuel gauge or fuel
+consumption meter. I decided to add this functionality by
+making an Arduino based interface, LCD Screen and
+buttons, with a speedometer (Hall effect based) and fuel
+flow meter (part from china). These parts should be capable
+of calculating speed, fuel consumption, fuel left and even
+estimated distance on tank.
+
+The interface and speedometer sections were successful
+but unfortunately the flow meter seemed to be faulty.
+
+\newpage
+\section{Experience}
+
+\subsection{Project Management - Project Manager}
+
+During my third year of studies I took a course on project
+management. I ended up being the project manager in a
+group of 7 people.
+
+Structuring a project from scratch and organizing the project
+into tasks were the main skills I learnt by being the project
+manager. Creating an environment where it was easy for
+everyone to complete their task was my main focus.
+
+\subsection{The Turntable Guy - Intern Technician}
+
+Because of my interest in audio I took an intern job at an
+audiophile shop. The shop focuses on fixing old amplifiers
+and turntables.
+
+The majority of my time was spent servicing, debugging and
+fixing old audio amplifiers. Some time was spent fixing
+turntables and helping customers.
+
+\subsection{Expertron - Engineering Intern}
+
+Expertron is a Linux-based software engineering and IT
+consulting company. I took the position to see what the
+process of Linux-based development involved.
+
+I was tasked to implement a content management system
+(CMS) based on SilverStripe for their website. This gave me
+lots of exposure to CSS and practical use in deploying a
+Linux based system.
+
+\subsection{For the love of Yummyness - Crêpe Chef}
+
+A university friend asked if I could help out at a crêpe stand
+at the Old Biscuit Mill. I eventually got hired permanently.
+When studies started to required my attention I only worked
+when needed.
+
+I learnt how to work with clients and the dynamics of a
+workplace. It gave me exposure of the tourist parts of Cape
+Town and was a great introduction to the city.
+
+\section{References}
+
+\subsubsection{Gavin Ehlers}
+
+Intern Supervisor
+\begin{description}
+	\setlength\itemsep{-1mm}
+	\item Experton Co-founder
+	\item gavin@expertron.co.za
+	\item 071 610 5952
+\end{description}
+
+\subsubsection{Dr Neil vd Watt}
+
+Music Teacher
+\begin{description}
+	\setlength\itemsep{-1mm}
+	\item Experton Co-founder
+	\item gavin@expertron.co.za
+	\item 071 610 5952
+\end{description}
+
+\newpage
+\section{Programming Tools}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{r p{5.7cm}}
+	Linux: & Six years as my primary personal computer with lots of tinkering \\
+	Java: & Second year object oriented programming,
+	data structures and concurrent programming \\
+	C++: & Third year computer science advanced overview \\
+	C: & Embedded Systems programming \\
+	Git: & Extensively used for university and personal projects \\
+	Make: & Extensively used for university and personal projects \\
+	Matlab: & Second year control theory and digital signal processing \\
+	Python: & Introduction to computer Science and online programming challenges \\
+	Delphi: & Three years in high school \\
+	VHDL: & Third year computer architecture course \\
+	\LaTeX: & Report writing throughout university \\
+\end{tabular}
+\end{center}
+
+\section{General Information}
+
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{r l}
+	Full Name: & Walter Smuts \\
+	Gender: & Male \\
+	ID Number: & 9603045068089 \\
+	Birth Date: & March 4th, 1996 \\
+	Nationality: & South African \\
+	Marital Status: & Unmarried \\
+	Residence: & Rondebosch, Cape Town \\
+	Hometown: & Brooklyn, Pretoria \\
+	Licence: & Car and Motorcycle \\
+	Personal Transport: & Yes \\
+\end{tabular}
+\end{center}
 
 \end{document}
-This is never printed
