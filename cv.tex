@@ -1,9 +1,11 @@
-\documentclass[twocolumn, 8pt]{extarticle}
+\documentclass[8pt]{extarticle}
 
-\usepackage{geometry}
+\usepackage[a4paper, top=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{titlesec}
 \usepackage{multicol}
+\usepackage{titling}
+\usepackage{color}
 
 \newcommand{\img}[1]{%
     \raisebox{-.1\baselineskip}{%
@@ -13,6 +15,23 @@
         keepaspectratio,
         ]{#1}%
     }%
+}
+
+\renewcommand{\maketitle}{
+\begin{multicols}{2}
+	{\bfseries\Huge\theauthor}
+
+	{\large\textit{ Love what you do and you’ll never work
+	a day in your life.}}
+
+	\vfill\null
+	\thetitle
+
+	Electrical and Computer Engineering Student
+	\columnbreak
+	\flushright
+	{\color{red} Text On right side}
+\end{multicols}
 }
 
 \titleformat{\section}
@@ -39,6 +58,8 @@
 \author{Walter Smuts}
 \maketitle
 
+\vspace{2mm}
+\begin{multicols}{2}
 \section{Education}
 
 \subsection{University of Cape Town \protect\img{UCT.jpg}
@@ -90,7 +111,8 @@ without the hiking club.
 \end{tabular}
 \end{center}
 
-\newpage
+\vfill\null
+\columnbreak
 \section{Projects}
 
 \subsection{TuneMe - University Project}
@@ -136,7 +158,8 @@ estimated distance on tank.
 The interface and speedometer sections were successful
 but unfortunately the flow meter seemed to be faulty.
 
-\newpage
+\vfill\null
+\columnbreak
 \section{Experience}
 
 \subsection{Project Management - Project Manager}
@@ -204,7 +227,8 @@ Music Teacher
 	\item 071 610 5952
 \end{description}
 
-\newpage
+\vfill\null
+\columnbreak
 \section{Programming Tools}
 \begin{center}
 \renewcommand{\arraystretch}{2}
@@ -241,5 +265,7 @@ Music Teacher
 	Personal Transport: & Yes \\
 \end{tabular}
 \end{center}
+
+\end{multicols}
 
 \end{document}
