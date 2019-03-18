@@ -1,3 +1,5 @@
-cv.aux
-cv.log
-cv.synctex.gz
+*.aux
+*.log
+*.synctex.gz
+*.out
+*.pdf
